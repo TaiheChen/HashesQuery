@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Report</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}" />
+</head>
+<body>
+  <table>
+    <tr>
+      <th>Hash_value</th>
+      <th>Fortinet_detection_name</th>
+      <th>Number_of_engines_detected</th>
+      <th>Scan_Date</th>
+    </tr>
+    {% for vendor in toHTML %}
+    <tr>
+      <td>{{ vendor["Hash_value"] }}</td>
+      <td>{{ vendor["Fortinet_detection_name"] }}</td>
+      <td>{{ vendor["Number_of_engines_detected"] }}</td>
+      <td>{{ vendor["Scan_Date"] }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+</body>
+</html>
