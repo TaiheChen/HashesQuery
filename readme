@@ -1,0 +1,31 @@
+How to run the project:
+1.type "python3 app.py" on the command line.
+2.Running on http://127.0.0.1:5000/
+3.Change the url to http://127.0.0.1:5000/upload
+4.Click on the "Choose File" button and select the file
+5.Click on the "submit" botton to submit your file
+6.Wait until the browser finishs loading
+7.See the result on the page http://127.0.0.1:5000/result
+
+Code layout:
+"savedFiles" Folder: to store files uploaded by users
+"static" Folder: to store css files
+"templates" Folder: to store html files
+example.db: to store queried hash_value
+app.py:
+-Vendor:create a table
+-homepage():render homepage
+-upload_file():render a page for uploading files
+-uploader():render a page for uploading files completely and demonstrate estimated time.
+-report():call API, store to database,render the report page
+
+Technology stack used:
+Linux environment(Ubuntu 20.04 on VMware Workstation)
+Python(.py), SQL(.db), html and css.
+
+Required dependencies:
+pip3 install Flask-SQLAlchemy
+pip3 install Flask
+
+Error encountered:
+I meet a package installation error, I tried to use" pip3 install Flask-SQLAlchemy" to install SQLAlchemy package, but it still displayed no module named flask_sqlalchemy. I moved the whole project to Linux environment and the problem solved after pip3 command. I think that's because there is a conflict between flask_sqlalchemy package and another package under windows environment.
